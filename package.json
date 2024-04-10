@@ -3,6 +3,10 @@
   "displayName": "File content copier",
   "description": "Copy the content inside of selected files",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/migmm/file-content-copier.git"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
