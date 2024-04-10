@@ -19,7 +19,7 @@ Did it ever happen to you that you wanted to copy the content of multiple files 
 
 And that´s all! Now yo have the content of the files you selected in the clipboard to paste wherever you want.
 
-![Instructions](https://github.com/migmm/file-content-copier/blob/images/assets/instructions.gif)
+![Instructions](https://github.com/migmm/file-content-copier/blob/images/assets/instuctions.gif)
 
 ## License
 
