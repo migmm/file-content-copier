@@ -1,6 +1,9 @@
 # FILE CONTENT COPIER
 
-![Logo](https://github.com/migmm/file-content-copier/blob/images/assets/extension-logo.gif)
+<p align="center">
+  <img src="https://github.com/migmm/file-content-copier/blob/images/assets/extension-logo.gif" alt="Logo">
+</p>
+
 
 Did it ever happen to you that you wanted to copy the content of multiple files to the clipboard and had to do the tedious work of copying them one by one? With this extension, you'll be able to copy the content of the files you select in the VSCode explorer and take it directly to the clipboard.
 
