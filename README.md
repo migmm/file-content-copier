@@ -1,7 +1,7 @@
 # FILE CONTENT COPIER
 
 <p align="center">
-  <img src="https://github.com/migmm/file-content-copier/blob/images/assets/extension-logo.gif" alt="Logo">
+  <img src="images/logo.png" alt="Logo">
 </p>
 
 
@@ -22,7 +22,7 @@ Did it ever happen to you that you wanted to copy the content of multiple files 
 
 And that´s all! Now yo have the content of the files you selected in the clipboard to paste wherever you want.
 
-![Instructions](https://github.com/migmm/file-content-copier/blob/images/assets/instuctions.gif)
+![Instructions](images/instuctions.gif)
 
 ## License
 
