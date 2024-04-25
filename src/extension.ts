@@ -5,7 +5,7 @@ import * as vscode from 'vscode';
 // This function returns the file structure of the selected files
 async function getFileStructure(allSelections: vscode.Uri[]): Promise<string> {
     const fileStructure = allSelections.map(uri => vscode.workspace.asRelativePath(uri)).join('\n');
-    return `File Structure:\n${fileStructure}\n\n`;
+    return `Folder Structure:\n${fileStructure}\n\n`;
 }
 
 // This method is called when your extension is activated
