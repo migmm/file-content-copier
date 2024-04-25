@@ -22,8 +22,22 @@
         "command": "extension.copyFilesContent",
         "title": "Copy Content",
         "category": "Files"
+      },
+      {
+        "command": "extension.openSettings",
+        "title": "Open Settings"
       }
     ],
+    "configuration": {
+      "title": "File Content Copier",
+      "properties": {
+        "copyFilesContent.includeFolderStructure": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include folder structure when copying files content."
+        }
+      }
+    },
     "menus": {
       "explorer/context": [
         {

@@ -2,6 +2,12 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
+// This function returns the file structure of the selected files
+async function getFileStructure(allSelections: vscode.Uri[]): Promise<string> {
+    const fileStructure = allSelections.map(uri => vscode.workspace.asRelativePath(uri)).join('\n');
+    return `File Structure:\n${fileStructure}\n\n`;
+}
+
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -14,6 +20,19 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         try {
+            const config = vscode.workspace.getConfiguration('copyFilesContent');
+
+            // Get the "copyFilesContent.includeFolderStructure": false in settings.json
+            // By default, includeStructure is true (when "copyFilesContent.includeFolderStructure": false not exists)
+            const includeStructure = config.get<boolean>('includeFolderStructure', true);
+
+            let structure = '';
+
+            // if includeStructure is true, then call getFileStructure function
+            if (includeStructure) {
+                structure = await getFileStructure(allSelections);
+            }
+
             const fileContents = await Promise.all(
                 allSelections.map(async (uri) => {
                     try {
@@ -28,7 +47,8 @@ export function activate(context: vscode.ExtensionContext) {
                 })
             );
 
-            const formattedContent = fileContents.join('\n\n');
+            // Join Structure folder and file content
+            const formattedContent = `${structure}${fileContents.join('\n\n')}`;
             if (formattedContent !== '') {
                 vscode.env.clipboard.writeText(formattedContent);
                 vscode.window.showInformationMessage('Content copied to clipboard!');
@@ -46,8 +66,14 @@ export function activate(context: vscode.ExtensionContext) {
     });
 
     context.subscriptions.push(disposable);
-}
 
+    // Register command to open settings
+    let openSettingsDisposable = vscode.commands.registerCommand('extension.openSettings', () => {
+        vscode.commands.executeCommand('workbench.action.openSettings', '@ext:yourExtensionId');
+    });
+
+    context.subscriptions.push(openSettingsDisposable);
+}
 
 // This method is called when your extension is deactivated
 export function deactivate() {}
