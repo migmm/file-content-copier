@@ -13,6 +13,7 @@ Did it ever happen to you that you wanted to copy the content of multiple files 
 - It takes up minimal memory space and doesn't interfere with anything.
 - Unlimited amount of characters to copy (determined by your computer's memory).
 - Each copied text appears with its corresponding name.
+- Show folder structure (configurable)
 
 ## Quick Start
 
@@ -23,6 +24,12 @@ Did it ever happen to you that you wanted to copy the content of multiple files 
 And that´s all! Now yo have the content of the files you selected in the clipboard to paste wherever you want.
 
 ![Instructions](images/instuctions.gif)
+
+
+#### Folder structure configuration
+
+![Configuration](images/config-menu.png)
+
 
 ## License
 
