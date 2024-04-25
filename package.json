@@ -2,7 +2,7 @@
   "name": "file-content-copier",
   "displayName": "File content copier",
   "description": "Copy the content inside of selected files",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/migmm/file-content-copier.git"
